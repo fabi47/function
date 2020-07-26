@@ -4,7 +4,7 @@ function kake($min, $max){
 
     $total = 1;
 
-        for ($i = $min; $i < $max; $i++){
+        for($i = $min; $i < $max; $i++){
             $total *= $i;
         }
 
