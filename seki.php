@@ -2,15 +2,15 @@
 
 function kake($min, $max){
 
-    for($i = $min; $i < $max; $i++){
-        for($s = $min; $s < $max; $s++){
+    $total = 1;
 
-            echo "$i" . "x" . "$s" . "=" . $i * $s . ".";
+        for ($i = $min; $i < $max; $i++){
+            $total *= $i;
         }
-    }
 
+        return $total;
 }
 
-kake(1, 10);
+echo kake(1, 10);
 
- ?>
+?>
