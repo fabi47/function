@@ -4,28 +4,28 @@
 
 $a = 1;
 $b = 10;
-$c = 0;
 
-$ss = tasu($a,$b,$c);
+$ss = tasu($a, $b);
 
     echo $ss . "\n";
 
-function tasu($a,$b,$c) {
+function tasu($a, $b) {
+    
+    $c = 0;
+    
+        for ($i = $a; $i < $b; $i++) {
+            $c += $i;
+        }
 
-    for ($i = $a; $i < $b; $i++) {
-        $c += $i;
-    }
-
-    return $c;
+        return $c;
 }
 
 //-------20~100までの和------------
 
 $a = 21;
 $b = 100;
-$c = 0;
 
-$ss = tasu($a,$b,$c);
+$ss = tasu($a, $b);
 
     echo $ss;
 
