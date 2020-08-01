@@ -3,9 +3,12 @@
 $min = 1;
 $max = 10;
 
+$min2 = 21;
+$max2 = 100;
+
 $fizz = 3;
 $buzz = 5;
-$fizzbuzz = 15;
+$fizzbuzz =　$fizz * $buzz;
 
 class HomeWork{
 
@@ -37,13 +40,19 @@ class HomeWork{
     }
 
 
-    public $tasu2 = "21~100までの和\n";
-/*
-    $min = 21;
-    $max = 100;
+   public $tasu2 = "21~100までの和\n";
 
-    $ss = tasu($min, $max);
-*/
+    public function tasu2($min2, $max2){
+
+        $c = 0;
+
+        for($i = $min2; $i < $max2; $i++){
+            $c += $i;
+        }
+
+            return $c . "\n";
+    }
+    
 
     public $fizzbuzzq = "fizzbuzz問題\n";
 
@@ -79,7 +88,7 @@ $homework = new HomeWork();
     echo $homework->tasu($min, $max);
 
     echo $homework->tasu2;
-    //echo $homework->;
+    echo $homework->tasu2($min2, $max2);
 
     echo $homework->fizzbuzzq;
     echo $homework->fizzbuzz($fizz, $buzz, $fizzbuzz);
