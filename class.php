@@ -9,16 +9,16 @@ $max2 = 100;
 $fizz = 3;
 $buzz = 5;
 
-class HomeWork{
+class HomeWork {
 
 //プロパティの宣言
 
     public $kake = "1~10までの積\n";
 
-    public function kake($min, $max){
+    public function kake($min, $max) {
         $total = 1;
 
-        for($i = $min; $i < $max; $i++){
+        for($i = $min; $i < $max; $i++) {
             $total *= $i;
         }
 
@@ -28,10 +28,10 @@ class HomeWork{
 
     public $tasu = "1~10までの和\n";
 
-    public function tasu($min, $max){
+    public function tasu($min, $max) {
         $c = 0;
 
-        for ($i = $min; $i < $max; $i++){
+        for ($i = $min; $i < $max; $i++) {
             $c += $i;
         }
 
@@ -41,35 +41,34 @@ class HomeWork{
 
    public $tasu2 = "21~100までの和\n";
 
-    public function tasu2($min2, $max2){
+   public function tasu2() {
+       
+       $min = 21;
+       $max =100;
 
-        $c = 0;
-
-        for($i = $min2; $i < $max2; $i++){
-            $c += $i;
-        }
-
-            return $c . "\n";
+       return $this->tasu($min, $max);
     }
     
-
+        
     public $fizzbuzz = "fizzbuzz問題\n";
 
-    public function fizzbuzz($fizz, $buzz){
+    public function fizzbuzz($fizz, $buzz) {
 
-        for ($i = 1; $i < 100; $i++){
+        $fizzbuzz = $fizz * $buzz;
+        
+        for ($i = 1; $i < 100; $i++) {
 
-            if($i != 1){
+            if($i != 1) {
                 echo ".";
             }
 
-            if($i % 15 === 0){
+            if($i % $fizzbuzz === 0) {
                 echo 'FizzBuzz';
-            }elseif ($i % $fizz === 0){
+            }elseif ($i % $fizz === 0) {
                 echo 'Fizz';
-            }elseif ($i % $buzz === 0){
+            }elseif ($i % $buzz === 0) {
                 echo 'Buzz';
-            }else{
+            }else {
                 echo $i;
             }
         }
@@ -87,7 +86,7 @@ $homework = new HomeWork();
     echo $homework->tasu($min, $max);
 
     echo $homework->tasu2;
-    echo $homework->tasu2($min2, $max2);
+    echo $homework->tasu2();
 
     echo $homework->fizzbuzz;
     echo $homework->fizzbuzz($fizz, $buzz);
