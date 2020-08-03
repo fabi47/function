@@ -8,7 +8,6 @@ $max2 = 100;
 
 $fizz = 3;
 $buzz = 5;
-$fizzbuzz =　$fizz * $buzz;
 
 class HomeWork{
 
@@ -54,9 +53,9 @@ class HomeWork{
     }
     
 
-    public $fizzbuzzq = "fizzbuzz問題\n";
+    public $fizzbuzz = "fizzbuzz問題\n";
 
-    public function fizzbuzz($fizz, $buzz, $fizzbuzz){
+    public function fizzbuzz($fizz, $buzz){
 
         for ($i = 1; $i < 100; $i++){
 
@@ -64,7 +63,7 @@ class HomeWork{
                 echo ".";
             }
 
-            if($i % $fizzbuzz === 0){
+            if($i % 15 === 0){
                 echo 'FizzBuzz';
             }elseif ($i % $fizz === 0){
                 echo 'Fizz';
@@ -90,7 +89,7 @@ $homework = new HomeWork();
     echo $homework->tasu2;
     echo $homework->tasu2($min2, $max2);
 
-    echo $homework->fizzbuzzq;
-    echo $homework->fizzbuzz($fizz, $buzz, $fizzbuzz);
+    echo $homework->fizzbuzz;
+    echo $homework->fizzbuzz($fizz, $buzz);
 
  ?>
