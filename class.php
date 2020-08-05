@@ -39,15 +39,7 @@ class HomeWork {
     }
 
 
-   public $tasu2 = "21~100までの和\n";
-
-   public function tasu2() {
-       
-       $min = 21;
-       $max =100;
-
-       return $this->tasu($min, $max);
-    }
+    public $tasu2 = "21~100までの和\n";
     
         
     public $fizzbuzz = "fizzbuzz問題\n";
@@ -55,24 +47,28 @@ class HomeWork {
     public function fizzbuzz($fizz, $buzz) {
 
         $fizzbuzz = $fizz * $buzz;
-        
+        $result = array();
+
         for ($i = 1; $i < 100; $i++) {
 
-            if($i != 1) {
-                echo ".";
-            }
-
             if($i % $fizzbuzz === 0) {
-                echo 'FizzBuzz';
+                $result[$i] = 'FizzBuzz';
             }elseif ($i % $fizz === 0) {
-                echo 'Fizz';
+                $result[$i] = 'Fizz';
             }elseif ($i % $buzz === 0) {
-                echo 'Buzz';
+                $result[$i] = 'Buzz';
             }else {
-                echo $i;
+                $result[$i] = $i;
             }
         }
+
+        foreach($result as $value) {
+            echo $value;
+        }
+
+        return $result;
     }
+
 
 }
 
@@ -86,7 +82,7 @@ $homework = new HomeWork();
     echo $homework->tasu($min, $max);
 
     echo $homework->tasu2;
-    echo $homework->tasu2();
+    echo $homework->tasu($min2, $max2);
 
     echo $homework->fizzbuzz;
     echo $homework->fizzbuzz($fizz, $buzz);
